@@ -36,11 +36,11 @@ kong gateway는 기본적으로 인증 관련된 플러그인들을 기본적으
 
 이 글에서는 간단한 이해를 돕기 위해 짧은 설명을 덧붙이도록 하겠습니다.
 
-![Untitled](https://user-images.githubusercontent.com/6061207/133881195-dea0b835-2785-4c57-a36c-4a2d8cbeab79.png)
+![Untitled](https://user-images.githubusercontent.com/6061207/133881195-dea0b835-2785-4c57-a36c-4a2d8cbeab79.png){: .align-center width="500"}
 
 Authentication(인증)은 회원 로그인과 같은 절차를 통해 해당 사용자에 대한 신원 확인을 하는 과정을 의미합니다. 보통 Google의 로그인 화면과 같이 사용자의 정보를 바탕으로 접근 가능한 사용자인지를 인증합니다.
 
-![Untitled 1](https://user-images.githubusercontent.com/6061207/133881199-79d08c02-87a1-4600-a48d-d0fe8443fef6.png)
+![Untitled 1](https://user-images.githubusercontent.com/6061207/133881199-79d08c02-87a1-4600-a48d-d0fe8443fef6.png){: .align-center width="500"}
 
 Authorization(인가)은 인증 과정에서 해당  어느 기능들을 사용할 수 있는지에 대한 권한을 확인하고 인가하는 과정을 의미합니다. 
 
@@ -48,7 +48,7 @@ Authorization(인가)은 인증 과정에서 해당  어느 기능들을 사용�
 
 여러 인증 방식중에 풍부한 스펙을 가진 OAuth2.0을 설명하기 위한 [글](https://developer.okta.com/blog/2017/06/21/what-the-heck-is-oauth)에 포함된 그림 중 일부를 발췌해 설명하도록 하겠습니다. 참고로 OAuth2.0은 여러 grant type에 따라 인증 절차가 다양합니다. 이에 대해서는 자세히 다루지 않고 생략하며, 조금 추상적인 단계로 설명을 이어나가보도록 하겠습니다.
 
-![Untitled 2](https://user-images.githubusercontent.com/6061207/133881404-cacb843d-d0d2-4ca4-ae3a-4c3069bf81e9.png)
+![Untitled 2](https://user-images.githubusercontent.com/6061207/133881404-cacb843d-d0d2-4ca4-ae3a-4c3069bf81e9.png){: .align-center width="500"}
 
 최종 목적은 Client가 ResourceServer에 접근하는 것이 목표이며, 이를 위해 Resource Server에 접근을 하기 위한 필수 조건인 token을 발급받는 과정이 필요합니다.
 
@@ -68,7 +68,7 @@ Authorization(인가)은 인증 과정에서 해당  어느 기능들을 사용�
 
 # 3. 인증 플러그인 종류
 
-![Untitled 3](https://user-images.githubusercontent.com/6061207/133881410-fe442a45-b527-45ee-9f67-02e80509e3a5.png)
+![Untitled 3](https://user-images.githubusercontent.com/6061207/133881410-fe442a45-b527-45ee-9f67-02e80509e3a5.png){: .align-center width="500"}
 
 위 사진은 konga 에서 캡쳐한 사진으로 kong에서 기본적으로 제공하는 Authentication 플러그인들을 보여줍니다. 이 중에 몇가지를 선택하여 사용하는 과정을 다뤄보겠습니다.
 
@@ -78,7 +78,7 @@ Authorization(인가)은 인증 과정에서 해당  어느 기능들을 사용�
 
 ## 4.1. 사용할 예제 및 준비
 
-![Untitled 4](https://user-images.githubusercontent.com/6061207/133881413-e0b98698-2212-41cb-b670-b645c6b34c8a.png)
+![Untitled 4](https://user-images.githubusercontent.com/6061207/133881413-e0b98698-2212-41cb-b670-b645c6b34c8a.png){: .align-center width="500"}
 
 이전 글에서도 사용했던 이미지를 가져왔습니다. 보통은 api gateway 내부의 upstream 서버로 요청하는 시나리오가 적당하지만, 기능을 테스트 하는것에 목적을 두기 위해 쉬운 예제로 google.com, naver.com. daum.net으로 요청하는 API를 두고 설명해보도록 하겠습니다.
 
@@ -88,11 +88,11 @@ Authorization(인가)은 인증 과정에서 해당  어느 기능들을 사용�
 
 아래 절차들은 konga 화면에서 Routes - Plugins 화면에서 플러그인들을 추가할 수 있습니다.
 
-![Untitled 5](https://user-images.githubusercontent.com/6061207/133881415-bb981972-5d81-47f2-ba17-6fa49cc36bd0.png)
+![Untitled 5](https://user-images.githubusercontent.com/6061207/133881415-bb981972-5d81-47f2-ba17-6fa49cc36bd0.png){: .align-center width="500"}
 
 또한 인증 과정은 앞서 말씀드린 내용처럼 요청자의 신원을 확인할 수 있어야 하는데, 예상되는 요청자를 Consumer를 통해 등록할 수 있습니다. 예를들어 G 라는 Consumer를 등록해놓으면, G만 Google 에 요청할 수 있도록 token을 발급해주는 과정을 말합니다.
 
-![Untitled 6](https://user-images.githubusercontent.com/6061207/133881417-41bd6a7b-c9dc-418f-945b-cfa848fbe229.png)
+![Untitled 6](https://user-images.githubusercontent.com/6061207/133881417-41bd6a7b-c9dc-418f-945b-cfa848fbe229.png){: .align-center width="500"}
 
 위 사진처럼 G, K, N Consumer를 미리 구성해둡니다.
 
@@ -139,17 +139,17 @@ header 및 query param 방식
 
 Consumers → N → Credentials → Basic → Create Credentials
 
-![Untitled 8](https://user-images.githubusercontent.com/6061207/133881420-5cdc5425-b013-4c96-b3ec-2c6f7a76cdb6.png)
+![Untitled 8](https://user-images.githubusercontent.com/6061207/133881420-5cdc5425-b013-4c96-b3ec-2c6f7a76cdb6.png){: .align-center width="500"}
 
 위와 같이 입력해줍니다.
 
-![Untitled 9](https://user-images.githubusercontent.com/6061207/133881421-e7f7deeb-2b67-4311-a902-e27843378721.png)
+![Untitled 9](https://user-images.githubusercontent.com/6061207/133881421-e7f7deeb-2b67-4311-a902-e27843378721.png){: .align-center width="500"}
 
 Naver service에 가서 플러그인을 설정해주고, Eligible consumers 도 확인해줍니다.
 
-![Untitled 10](https://user-images.githubusercontent.com/6061207/133881422-74088ec8-b2cb-49af-8ee4-84a743ba4399.png)
+![Untitled 10](https://user-images.githubusercontent.com/6061207/133881422-74088ec8-b2cb-49af-8ee4-84a743ba4399.png){: .align-center width="500"}
 
-![Untitled 11](https://user-images.githubusercontent.com/6061207/133881423-207b3d84-233d-47e9-a5f1-873e6d4e59ce.png)
+![Untitled 11](https://user-images.githubusercontent.com/6061207/133881423-207b3d84-233d-47e9-a5f1-873e6d4e59ce.png){: .align-center width="500"}
 
 이렇게 설정된 API로 요청해보도록 합니다.
 
@@ -195,17 +195,17 @@ curl {kong address}/naver -H "Authorization: Basic bmF2ZXItdGVzdDoxMjM0"
 
 Consumers → K → Credentials → API Keys→ Create Credentials
 
-![Untitled 13](https://user-images.githubusercontent.com/6061207/133881428-1f3393b1-ca29-460d-a895-10bd6e533ee9.png)
+![Untitled 13](https://user-images.githubusercontent.com/6061207/133881428-1f3393b1-ca29-460d-a895-10bd6e533ee9.png){: .align-center width="500"}
 
-![Untitled 14](https://user-images.githubusercontent.com/6061207/133881429-a45d4805-35cf-4646-b39e-86dac958cc59.png)
+![Untitled 14](https://user-images.githubusercontent.com/6061207/133881429-a45d4805-35cf-4646-b39e-86dac958cc59.png){: .align-center width="500"}
 
-![Untitled 15](https://user-images.githubusercontent.com/6061207/133881430-d20abd0d-41fb-4715-b600-2198b3d5beac.png)
+![Untitled 15](https://user-images.githubusercontent.com/6061207/133881430-d20abd0d-41fb-4715-b600-2198b3d5beac.png){: .align-center width="500"}
 
 플러그인을 붙일때 아무 값도 입력하지 않으면 다음 정보가 기본으로 입력됩니다.
 
-![Untitled 16](https://user-images.githubusercontent.com/6061207/133881431-4fdbcf7e-d5e8-4afd-8756-796ec241ce52.png)
+![Untitled 16](https://user-images.githubusercontent.com/6061207/133881431-4fdbcf7e-d5e8-4afd-8756-796ec241ce52.png){: .align-center width="500"}
 
-![Untitled 17](https://user-images.githubusercontent.com/6061207/133881432-c33c18c6-ff18-4bf1-b97a-0e6d69bce316.png)
+![Untitled 17](https://user-images.githubusercontent.com/6061207/133881432-c33c18c6-ff18-4bf1-b97a-0e6d69bce316.png){: .align-center width="500"}
 
 요청
 
@@ -245,21 +245,20 @@ curl {kong address}/kakao?apikey=test-api-key
 
 Consumers → G → Credentials → HMAC → Create Credentials
 
-![Untitled 18](https://user-images.githubusercontent.com/6061207/133881433-f9065095-0aca-49eb-9993-d660edb4d664.png)
+![Untitled 18](https://user-images.githubusercontent.com/6061207/133881433-f9065095-0aca-49eb-9993-d660edb4d664.png){: .align-center width="500"}
 
-![Untitled 19](https://user-images.githubusercontent.com/6061207/133881434-065825c6-c4e1-4e27-86d6-42c627c91b71.png)
-
-![Untitled 20](https://user-images.githubusercontent.com/6061207/133881435-61fd7500-f966-4349-afc4-a7c141183e25.png)
+![Untitled 19](https://user-images.githubusercontent.com/6061207/133881434-065825c6-c4e1-4e27-86d6-42c627c91b71.png){: .align-center width="500"}
+![Untitled 20](https://user-images.githubusercontent.com/6061207/133881435-61fd7500-f966-4349-afc4-a7c141183e25.png){: .align-center width="500"}
 
 플러그인을 붙일때 아무 값도 입력하지 않으면 다음 정보가 기본으로 입력됩니다.
 
-![Untitled 21](https://user-images.githubusercontent.com/6061207/133881436-f3ff9735-6d6e-49d1-9f42-a348da5e0bc9.png)
+![Untitled 21](https://user-images.githubusercontent.com/6061207/133881436-f3ff9735-6d6e-49d1-9f42-a348da5e0bc9.png){: .align-center width="500"}
 
-![Untitled 22](https://user-images.githubusercontent.com/6061207/133881437-0ba0e8fa-2ba5-46ae-8fd9-a009c8e96eb7.png)
+![Untitled 22](https://user-images.githubusercontent.com/6061207/133881437-0ba0e8fa-2ba5-46ae-8fd9-a009c8e96eb7.png){: .align-center width="500"}
 
  [hmac auth header generator](https://www.freeformatter.com/hmac-generator.html) 사이트에서 Authorization 헤더에 포함시킬 정보를 생성해보도록 합니다.
 
-![Untitled 23](https://user-images.githubusercontent.com/6061207/133881439-6161c12e-092a-4219-bd53-2cb65928a19c.png)
+![Untitled 23](https://user-images.githubusercontent.com/6061207/133881439-6161c12e-092a-4219-bd53-2cb65928a19c.png){: .align-center width="500"}
 
 요청
 
