@@ -123,7 +123,7 @@ header 방식 - ex) Authorization : hmac username="hmac-test",algorithm="hmac-sh
 
 ### [jwt](https://docs.konghq.com/hub/kong-inc/jwt)
 
-header 방식 - ex) Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhMzZjMzA0OWIzNjI0OWEzYzlmODg5MWNiMTI3MjQzYyIsImV4cCI6MTQ0MjQzMDA1NCwibmJmIjoxNDQyNDI2NDU0LCJpYXQiOjE0NDI0MjY0NTR9.AhumfY35GFLuEEjrOXiaADo7Ae6gt_8VLwX7qffhQN4
+header 방식 - ex) Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....
 
 [jwt auth header generator](https://jwt.io/)
 
