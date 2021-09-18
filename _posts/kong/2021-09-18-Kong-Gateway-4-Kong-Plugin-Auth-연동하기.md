@@ -96,7 +96,7 @@ Authorization(인가)은 인증 과정에서 해당  어느 기능들을 사용�
 
 위 사진처럼 G, K, N Consumer를 미리 구성해둡니다.
 
-![Untitled 7](https://user-images.githubusercontent.com/6061207/133881419-78410fce-2cfc-4c18-a386-d401ecb68a63.png)
+![Untitled 7](https://user-images.githubusercontent.com/6061207/133881419-78410fce-2cfc-4c18-a386-d401ecb68a63.png){: .align-center width="500"}
 
 
 생성 후 해당 Consumer에게 적용할 Credentials를 설정할 수 있는데, 이 글에선 Basic, API Keys, HMAC 을 각각 Naver, Kakao, Google에 적용해보도록 할 예정입니다.
@@ -169,7 +169,7 @@ curl {kong address}/naver
 
 [basic auth header generator](https://www.blitter.se/utils/basic-authentication-header-generator)  사이트에서 Authorization 헤더에 포함시킬 정보를 생성해보도록 합니다.
 
-![Untitled 12](https://user-images.githubusercontent.com/6061207/133881425-67cbe733-0aca-4a56-870f-c7594d8edaf1.png)
+![Untitled 12](https://user-images.githubusercontent.com/6061207/133881425-67cbe733-0aca-4a56-870f-c7594d8edaf1.png){: .align-center width="500"}
 
 요청
 
