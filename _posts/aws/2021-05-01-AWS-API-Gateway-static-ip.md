@@ -149,6 +149,36 @@ VPC 구성은 아래와 같이 이미 완료되어있는 것을 가정하며 본
 
 문제의 인식 부분에서 사용했던 테스트용 Get Method를 위 내용과 같이 정의한 뒤에 배포합니다.
 
+api gateway 생성 시 지정했던 vpceID를 {{vpceID}}에 넣어 해당 정책을 ResourcePolicy에서 반드시 추가시켜줘야 합니다.
+```python3
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "execute-api:Invoke",
+            "Resource": [
+                "execute-api:/*"
+            ]
+        },
+        {
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "execute-api:Invoke",
+            "Resource": [
+                "execute-api:/*"
+            ],
+            "Condition" : {
+                "StringNotEquals": {
+                    "aws:SourceVpce": "{{vpceID}}"
+                }
+            }
+        }
+    ]
+}
+```
+
 ## 3.2. VPC Endpoint 생성
 
 ![image](https://user-images.githubusercontent.com/79149004/116772498-77f9cb00-aa8a-11eb-8bf4-1cee49a96cfb.png)
