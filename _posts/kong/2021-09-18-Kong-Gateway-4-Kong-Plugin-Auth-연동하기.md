@@ -9,7 +9,8 @@ related: true
 categories:
   - Kong
 tag:
-  - Kong, Plugin, Auth
+  - Kong
+  - Auth
 toc: true
 toc_sticky: true
 toc_label: 목차

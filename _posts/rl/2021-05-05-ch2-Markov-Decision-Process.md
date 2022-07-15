@@ -9,7 +9,9 @@ related: true
 categories:
   - Reinforcement Learning
 tag:
-  - Reinforcement Learning, MDP, MRP
+  - Reinforcement Learning
+  - MDP
+  - MRP
 toc: true
 toc_sticky: true
 toc_label: 목차

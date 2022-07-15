@@ -9,7 +9,10 @@ related: true
 categories:
   - Kong
 tag:
-  - Kong, API Gateway, Reverse Proxy, Ingress
+  - Kong
+  - API Gateway
+  - Reverse Proxy
+  - Ingress
 toc: true
 toc_sticky: true
 toc_label: 목차

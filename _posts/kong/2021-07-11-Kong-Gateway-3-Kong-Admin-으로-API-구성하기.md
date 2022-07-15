@@ -9,7 +9,8 @@ related: true
 categories:
   - Kong
 tag:
-  - Kong, Kong Admin
+  - Kong
+  - Kong Admin
 toc: true
 toc_sticky: true
 toc_label: 목차

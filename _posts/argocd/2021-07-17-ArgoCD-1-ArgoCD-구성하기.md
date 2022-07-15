@@ -9,7 +9,8 @@ related: true
 categories:
   - ArgoCD
 tag:
-  - ArgoCD, CI/CD
+  - ArgoCD
+  - CI/CD
 toc: true
 toc_sticky: true
 toc_label: 목차

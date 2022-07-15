@@ -9,7 +9,10 @@ related: true
 categories:
   - Reinforcement Learning
 tag:
-  - Reinforcement Learning, Dynamic Programming, Policy Iteration, Value Iteration
+  - Reinforcement Learning
+  - Dynamic Programming
+  - Policy Iteration
+  - Value Iteration
 toc: true
 toc_sticky: true
 toc_label: 목차

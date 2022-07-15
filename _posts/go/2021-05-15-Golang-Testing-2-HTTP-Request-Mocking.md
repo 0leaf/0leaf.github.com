@@ -9,7 +9,9 @@ related: true
 categories:
   - Golang
 tag:
-  - Golang, Testing, Unit Test
+  - Golang
+  - Testing
+  - Unit Test
 toc: true
 toc_sticky: true
 toc_label: 목차
