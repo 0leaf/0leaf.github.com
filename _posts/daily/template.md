@@ -1,5 +1,5 @@
 ---
-title: template
+title: daily 기록을 시작하면서...
 layout: single
 author_profile: false
 read_time: true
@@ -10,7 +10,7 @@ categories:
   - Daily
 tag:
   - Daily
-toc: true
+toc: false
 toc_sticky: true
 toc_label: 목차
 description: desc
@@ -22,5 +22,3 @@ last_modified_at: "2022-08-10 00:00:00 +0800"
 그 과정에서 웹에서 많은 도움을 받고 있습니다.
 나에게 이해가 잘 되는 글을 찾기 위해 같은 주제라도 여러 글들을 놓고 살펴보곤 합니다.
 제가 이해한 방식이 누군가에게도 도움이 될 수 있을까 하는 마음에 다양한 카테고리의 기록을 남겨보려고 합니다.
-
-탐험, 꿈 그리고 발견
