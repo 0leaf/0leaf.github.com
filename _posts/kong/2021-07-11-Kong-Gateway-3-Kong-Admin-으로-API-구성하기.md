@@ -282,7 +282,7 @@ curl -i -X POST http://xxx2.ap-northeast-2.elb.amazonaws.com:8001/plugins \
     "hour": null,
     "day": null,
     "month": null,
-    "year": null,
+    "month": null,
     "policy": "local",
     "fault_tolerant": true,
     "hide_client_headers": false,
