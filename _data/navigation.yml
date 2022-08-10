@@ -6,5 +6,5 @@ main:
     url: /tags/
 #  - title: "About"
 #    url: /about/
-  - title: "Month"
-    url: "/month-archive/"
+  - title: "Year"
+    url: "/year-archive/"
