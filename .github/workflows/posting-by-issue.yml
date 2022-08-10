@@ -42,7 +42,7 @@ jobs:
         run: |
           git config --global user.name "0leaf"
           git config --global user.email "0leaf.dev@gmail.com"
-          git add &lt;pathspec&gt; git commit -m "Update ${{ github.event.issue.title }}.md"
+          git add .&lt;pathspec&gt; git commit -m "Update ${{ github.event.issue.title }}.md"
           git push
       - name: Add comment
         uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
