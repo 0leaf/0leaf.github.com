@@ -23,11 +23,12 @@ jobs:
     permissions:
       issues: write
     steps:
+      - name : Add ssh key
+        run: |
+          eval `ssh-agent -s`
+          ssh-add - <<< '${{ secrets.PRIVATE_SSH_KEY }}'
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          repository: 0leaf/0leaf.github.com
-          token: ${{ secrets.ACCESS_TOKEN }}
       - name: View isue information
         run: |
           echo "Issue title: ${{ github.event.issue.title }}"
