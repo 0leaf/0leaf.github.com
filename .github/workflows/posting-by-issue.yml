@@ -36,7 +36,7 @@ jobs:
 
       - name : Write file and push to repo
         run: |
-          echo "${{ github.event.issue.body }}" > _posts/daily/${{ github.event.issue.title }}.md
+          echo "${{ github.event.issue.body }}" > _posts/daily/"${{ github.event.issue.title }}".md
       - name : Commit and push
         run: |
           git config --global user.name "0leaf"
