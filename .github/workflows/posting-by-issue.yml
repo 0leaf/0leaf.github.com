@@ -39,7 +39,11 @@ jobs:
         run: echo "FILE_NAME=$(echo ${{ github.event.issue.title }} | tr ' ' -)" >> $GITHUB_ENV
 
       - name : Write file and push to repo
+<<<<<<< HEAD
         run:  echo "${{ github.event.issue.body }}" > _posts/daily/"${{ env.FILE_NAME }}".md
+=======
+          echo "${{ github.event.issue.body }}" > _posts/daily/"${{ env.FILE_NAME }}".md
+>>>>>>> d45cadda645ac313adc1979a33974e5e9d1d4a32
 
       - name : Commit and push
         run: |
