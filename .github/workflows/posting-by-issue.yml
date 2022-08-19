@@ -24,16 +24,12 @@ jobs:
           ssh-add - <<< '${{ secrets.PRIVATE_SSH_KEY }}'
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: View isue information
-        run: |
-          echo "Issue title: ${{ github.event.issue.title }}"
-          echo "Issue body: ${{ github.event.issue.body }}"
 
       - name : Rename file
         run: echo "FILE_NAME=$(echo ${{ github.event.issue.title }} | tr ' ' -)" >> $GITHUB_ENV
 
       - name : Write file and push to repo
-        run:  echo '${{ github.event.issue.body }}' | sed "s/```/---/" > _posts/"${{ env.FILE_NAME }}".md
+        run:  echo -e '${{ github.event.issue.body }}' | sed "s/```/---/" > _posts/"${{ env.FILE_NAME }}".md
               
       - name : Commit and push
         run: |
