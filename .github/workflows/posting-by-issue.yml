@@ -12,13 +12,7 @@ on:
 
 jobs:
   add-comment:
-    # post 파일 삭제 여부 판단
-    # comment 정보 읽기
-
-    # comment 파일 생성
-
-    # 완료 comment 생성
-    if: github.event.label.name == 'help-wanted'
+    if: github.event.label.name == 'release'
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -39,12 +33,8 @@ jobs:
         run: echo "FILE_NAME=$(echo ${{ github.event.issue.title }} | tr ' ' -)" >> $GITHUB_ENV
 
       - name : Write file and push to repo
-<<<<<<< HEAD
-        run:  echo "${{ github.event.issue.body }}" > _posts/daily/"${{ env.FILE_NAME }}".md
-=======
-          echo "${{ github.event.issue.body }}" > _posts/daily/"${{ env.FILE_NAME }}".md
->>>>>>> d45cadda645ac313adc1979a33974e5e9d1d4a32
-
+        run:  echo "${{ github.event.issue.body }}" > _posts/"${{ env.FILE_NAME }}".md
+              
       - name : Commit and push
         run: |
           git config --global user.name "0leaf"
@@ -56,4 +46,4 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            This issue is available for anyone to work on. **Make sure to reference this issue in your pull request.** :sparkles: Thank you for your contribution! :sparkles:
+            Post has been released! :sparkles:
