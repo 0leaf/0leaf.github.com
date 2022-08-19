@@ -1,12 +1,13 @@
 ---
 name: blog posting
 about: Describe this issue template's purpose here.
-title: ''
+title: 2022-00-00
 labels: ''
 assignees: ''
 
 ---
 
+---
 title: 
 layout: single
 author_profile: false
