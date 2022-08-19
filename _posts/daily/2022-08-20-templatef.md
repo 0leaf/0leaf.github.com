@@ -1,5 +1,5 @@
 ---
-title: templatef
+title: templateek
 layout: single
 author_profile: false
 read_time: true
