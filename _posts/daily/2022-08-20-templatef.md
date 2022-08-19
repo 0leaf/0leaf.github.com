@@ -1,5 +1,5 @@
 ---
-title: template2
+title: templatef
 layout: single
 author_profile: false
 read_time: true
