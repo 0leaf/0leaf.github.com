@@ -29,7 +29,7 @@ jobs:
         run: echo "FILE_NAME=$(echo ${{ github.event.issue.title }} | tr ' ' -)" >> $GITHUB_ENV
 
       - name : Write file and push to repo
-        run:  echo -e '${{ github.event.issue.body }}' | sed "s/```/---/" > _posts/"${{ env.FILE_NAME }}".md
+        run:  echo -e '${{ github.event.issue.body }}' | sed -e "s/```/---/" > _posts/"${{ env.FILE_NAME }}".md
               
       - name : Commit and push
         run: |
