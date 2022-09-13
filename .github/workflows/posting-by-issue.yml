@@ -10,6 +10,8 @@ jobs:
     if: github.event.label.name == 'release'
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: posting-by-issue
         uses: 0leaf/issue-to-md-posting@v0.1.1
         with:
