@@ -1,5 +1,5 @@
 ---
-title: "-"
+title: "redis cluster mode"
 layout: single
 author_profile: false
 read_time: true
@@ -14,7 +14,7 @@ toc_stiky: true
 description: ""
 article_section: ""
 meta_keywords: ""
-last_modified_at: '"2024-06-30 09:00:00 +0800"'
+last_modified_at: '"2024-07-06 09:00:00 +0800"'
 ---
 redis cluster mode에 대해 이해하고, 현재 구성된 redis 환경 정보를 확인하는 방법에 대해 알아봅니다.
 
