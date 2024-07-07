@@ -6,20 +6,19 @@ read_time: true
 share: true
 related: true
 categories:
-  - redis
+  - Redis
 tags:
-  - redis
-  - key
-  - rules
-  - convention
+  - Redis
+  - Key
+  - Convention
 toc: false
 toc_stiky: true
 description: ""
 article_section: ""
 meta_keywords: ""
-last_modified_at: '"2024-06-30 09:00:00 +0800"'
+last_modified_at: 2024-07-07T15:15:52+09:00
+created: 2024-06-22T10:56:38+09:00
 ---
-
 ## TL; DR
 - 계층 구조를 표현하기 위한 delimiter를 정합니다 (":")
 - 쉽게 이해 가능하기 위한 길이로 key를 구성합니다.
@@ -32,6 +31,3 @@ Redis 키는 binary safe합니다. 즉, "foo"와 같은 문자열부터 JPEG 파
 - 스키마를 고수하려고 노력하세요.
 	- 예를 들어 "object-type:id"는 "user:1000"처럼 좋은 아이디어입니다. .이나 -는 "comment:4321:reply.to" 또는 "comment:4321:reply-to"처럼 여러 단어로 구성된 필드에 자주 사용될 수 있습니다.
 - 허용되는 최대 키 크기는 512MB입니다.
-
-# Refrences
-- https://redis.io/docs/latest/develop/use/keyspace/
